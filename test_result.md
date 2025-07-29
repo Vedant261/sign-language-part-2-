@@ -129,7 +129,7 @@ backend:
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
@@ -137,6 +137,9 @@ backend:
       - working: true
         agent: "main"
         comment: "Implemented WebSocket endpoint with ConnectionManager class, supports real-time messaging between candidates and HR"
+      - working: true
+        agent: "testing"
+        comment: "TESTED: WebSocket endpoint /ws/{user_id} works correctly on localhost:8001 with ping-pong functionality. External WebSocket routing through Kubernetes ingress has timeout issues but backend implementation is solid"
 
   - task: "Create interview session management API"
     implemented: true
