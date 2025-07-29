@@ -257,11 +257,7 @@ metadata:
   run_ui: false
 
 test_plan:
-  current_focus:
-    - "Create WebSocket endpoint for real-time communication"
-    - "Create interview session management API"
-    - "Create user management (candidate/HR roles)"
-    - "Install ML dependencies for sign language recognition"
+  current_focus: []
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
