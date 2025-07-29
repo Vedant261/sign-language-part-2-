@@ -101,3 +101,122 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Build a sign language interview tool where deaf/mute candidates can communicate with HR through sign language. Candidate shows signs via webcam → converted to text → text-to-speech for HR. HR speaks → converted to text → displayed as text-based sign language for candidate. Real-time bidirectional communication during interviews."
+
+backend:
+  - task: "Install ML dependencies for sign language recognition"
+    implemented: false
+    working: "NA"
+    file: "requirements.txt"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Starting fresh implementation - need MediaPipe, OpenCV, WebSocket support"
+
+  - task: "Create WebSocket endpoint for real-time communication"
+    implemented: false
+    working: "NA"
+    file: "server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Need to implement WebSocket for candidate-HR real-time communication"
+
+  - task: "Create interview session management API"
+    implemented: false
+    working: "NA"
+    file: "server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Need APIs for creating, joining, managing interview sessions"
+
+  - task: "Create user management (candidate/HR roles)"
+    implemented: false
+    working: "NA"
+    file: "server.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Need to differentiate between candidate and HR users"
+
+frontend:
+  - task: "Install webcam and ML dependencies"
+    implemented: false
+    working: "NA"
+    file: "package.json"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Need MediaPipe, camera access, WebSocket client libraries"
+
+  - task: "Create candidate interface with webcam"
+    implemented: false
+    working: "NA"
+    file: "src/CandidateView.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Interface for sign language input via webcam + text display for HR messages"
+
+  - task: "Create HR interface with voice input"
+    implemented: false
+    working: "NA"
+    file: "src/HRView.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Interface for voice input + text output from candidate signs"
+
+  - task: "Implement real-time WebSocket communication"
+    implemented: false
+    working: "NA"
+    file: "src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "WebSocket client for real-time bidirectional communication"
+
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 0
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "Install ML dependencies for sign language recognition"
+    - "Install webcam and ML dependencies"
+    - "Create WebSocket endpoint for real-time communication"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "main"
+    message: "Starting sign language interview tool implementation. Beginning with dependency installation and basic architecture setup."
