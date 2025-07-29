@@ -300,7 +300,7 @@ class BackendTester:
             ws_url = f"{WS_BASE}/ws/{user_id}"
             
             # Test basic WebSocket connection
-            async with websockets.connect(ws_url, timeout=10) as websocket:
+            async with websockets.connect(ws_url) as websocket:
                 self.log_test("WebSocket connection", True, f"Successfully connected to {ws_url}")
                 
                 # Test ping-pong
