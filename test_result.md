@@ -165,7 +165,7 @@ backend:
     file: "server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
@@ -173,6 +173,9 @@ backend:
       - working: true
         agent: "main"
         comment: "Implemented user management with role-based system (candidate/hr), user creation and retrieval endpoints"
+      - working: true
+        agent: "testing"
+        comment: "TESTED: User management APIs working perfectly - POST /api/users creates users with proper role validation (candidate/hr), GET /api/users/{id} retrieves user details correctly, proper 404 handling for non-existent users. Role-based system functioning as expected"
 
 frontend:
   - task: "Install webcam and ML dependencies"
